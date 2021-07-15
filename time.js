@@ -9,28 +9,29 @@ function getNow() {
 	var year = now.getFullYear();
 	var mon = now.getMonth()+1; //１を足すこと
 	var day = now.getDate();
-	var hour = now.getHours();
-	var min = now.getMinutes();
-	var sec = now.getSeconds();
-
-    var s = '';
-	//出力用
-	if (hour < 10 && min < 10 && sec < 10){
-        s = year + "/" + mon + "/" + day + "/" + "0" + hour + ":" + "0" + min + ":" + "0" + sec;
-    } else if (hour < 10 && min < 10 ){
-        s = year + "/" + mon + "/" + day + "/" + "0" + hour + ":" + "0" + min + ":" + sec;
-    } else if (hour < 10 && sec < 10){
-        s = year + "/" + mon + "/" + day + "/" + "0" + hour + ":" + min + ":" + "0" + sec;
-    } else if (min < 10 && sec < 10){
-        s = year + "/" + mon + "/" + day + "/" + hour + ":" + "0" + min + ":" + "0" + sec;
-    } else if (hour < 10) {
-        s = year + "/" + mon + "/" + day + "/" + "0" + hour + ":" + min + ":" + sec;
-    } else if (min < 10) {
-        s = year + "/" + mon + "/" + day + "/" + hour + ":" + "0" + min + ":" + sec;
-    } else if (sec < 10) {
-        s = year + "/" + mon + "/" + day + "/" + hour + ":" + min + ":" + "0" + sec;
-    } else {
-        s = year + "/" + mon + "/" + day + "/" + hour + ":" + min + ":" + sec;
-    }
+	var hour = '';
+	if(now.getHours() < 10){ 
+		hour = "0" + now.getHours();
+	} else {
+		hour = now.getHours();
+	}
+	  
+	var min = '';
+	if(now.getMinutes() < 10){ 
+		min = "0" + now.getMinutes();
+	} else {
+		min = now.getMinutes();
+	}
+	
+	var sec = '';
+	if(now.getSeconds()() < 10){ 
+		sec = "0" + now.getSeconds()();
+	} else {
+		sec = now.getSeconds()();
+	}
+	
+	
+	var s = year + "/" + mon + "/" + day + "/" + hour + ":" + min + ":" + sec;;
+	
 	return s;
 }
