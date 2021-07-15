@@ -24,10 +24,10 @@ function getNow() {
 	}
 	
 	var sec = '';
-	if(now.getSeconds()() < 10){ 
-		sec = "0" + now.getSeconds()();
+	if(now.getSeconds() < 10){ 
+		sec = "0" + now.getSeconds();
 	} else {
-		sec = now.getSeconds()();
+		sec = now.getSeconds();
 	}
 	
 	
