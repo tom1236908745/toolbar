@@ -16,6 +16,6 @@ battery.then(function (battery_manager){
         battyElement.className = 'fa fa-battery-1';
     }　else {
         alert("充電もう少しで切れるで");
-        battyElement.innerHTML = "充電して下さいバッテリー残量は後" + battery_manager.level * 100 + "です。";
+        battyElement.innerHTML = " 充電して下さいバッテリー残量は後" + battery_manager.level * 100 + "%です。 ";
     }
 })
